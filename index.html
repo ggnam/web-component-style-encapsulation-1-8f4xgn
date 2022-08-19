@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shadow Dom Demos</title>
+    <script src="./node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f2f2f2;
+      }
+
+      p {
+        color: blue;
+      }
+
+      /**
+       * Custom Elements provide a small amount of specificity namespacing for child elements.
+       */
+      parent-element p {
+        color: green;
+      }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+
+  <body>
+    <parent-element>
+      <div slot="styledContent">Hello World?</div>
+    </parent-element>
+  </body>
+</html>
